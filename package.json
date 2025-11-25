@@ -4,9 +4,10 @@
   "description": "面向小学生的游泳力学原理教学Web应用",
   "main": "index.html",
   "scripts": {
-    "start": "npx serve . -l 3000",
-    "dev": "npx serve . -l 3000 -o",
-    "build": "echo 'Static build - ready for deployment'",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "serve dist -l 3000",
     "test": "echo 'No tests specified yet' && exit 0"
   },
   "repository": {
@@ -23,7 +24,9 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "serve": "^14.2.0"
+    "@vitejs/plugin-react": "^5.1.1",
+    "serve": "^14.2.0",
+    "vite": "^7.2.4"
   },
   "bugs": {
     "url": "https://github.com/Hexma/mechanics-course-for-swimming/issues"

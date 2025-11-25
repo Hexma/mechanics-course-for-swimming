@@ -1,4 +1,4 @@
-const { useState } = React;
+import React, { useState } from 'react';
 // 课程数据
 const courses = [
   {
@@ -681,6 +681,5 @@ const App = () => {
   );
 };
 
-// 渲染应用
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+// 导出应用组件
+export default App;
