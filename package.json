@@ -21,7 +21,6 @@
     "interactive-learning",
     "elementary-education"
   ],
-  "author": "Shenguozu",
   "license": "MIT",
   "devDependencies": {
     "serve": "^14.2.0"
