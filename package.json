@@ -1,0 +1,40 @@
+{
+  "name": "mechanics-course-for-swimming",
+  "version": "1.0.0",
+  "description": "面向小学生的游泳力学原理教学Web应用",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -l 3000",
+    "dev": "npx serve . -l 3000 -o",
+    "build": "echo 'Static build - ready for deployment'",
+    "test": "echo 'No tests specified yet' && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hexma/mechanics-course-for-swimming.git"
+  },
+  "keywords": [
+    "education",
+    "physics",
+    "swimming",
+    "mechanics",
+    "interactive-learning",
+    "elementary-education"
+  ],
+  "author": "Shenguozu",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/Hexma/mechanics-course-for-swimming/issues"
+  },
+  "homepage": "https://github.com/Hexma/mechanics-course-for-swimming#readme",
+  "dependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "typescript": "^5.9.3"
+  }
+}

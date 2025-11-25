@@ -1,0 +1,980 @@
+/* 全局样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial', 'Microsoft YaHei', sans-serif;
+  background: linear-gradient(to bottom, #87CEEB 0%, #4A90E2 100%);
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #87CEEB 0%, #4A90E2 100%);
+}
+
+/* 首页样式 */
+.home-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+/* 课程网格 */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+.course-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.course-icon {
+  font-size: 3rem;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: white;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.course-card h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.course-card p {
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.difficulty-badge {
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* 课程页面样式 */
+.course-page {
+  min-height: 100vh;
+}
+
+.course-header {
+  padding: 30px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.course-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.chapters-list {
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.chapters-list h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.chapter-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #4A90E2;
+}
+
+.chapter-card:hover {
+  transform: translateX(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.chapter-card h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.chapter-card p {
+  color: #7f8c8d;
+}
+
+/* 章节内容页面 */
+.chapter-page {
+  min-height: 100vh;
+  background: white;
+}
+
+.chapter-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 30px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.chapter-header h1 {
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.chapter-main {
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.lesson-content h2 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* 互动演示样式 */
+.interactive-demo {
+  margin: 30px 0;
+}
+
+.interactive-demo h3 {
+  color: #34495e;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.demo-box {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  border: 2px dashed #3498db;
+}
+
+.water-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+  min-height: 100px;
+}
+
+.water-particle {
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, #3498db, #2980b9);
+  border-radius: 50%;
+  animation: wave 2s infinite ease-in-out;
+  position: relative;
+}
+
+.water-particle::before {
+  content: '💧';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+}
+
+.hand-icon {
+  font-size: 3rem;
+  animation: touch 3s infinite ease-in-out;
+}
+
+@keyframes wave {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.1) rotate(-5deg); }
+  75% { transform: scale(0.9) rotate(5deg); }
+}
+
+@keyframes touch {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(20px); }
+}
+
+/* 浮力演示样式 */
+.float-demo {
+  background: #e3f2fd;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.objects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.object-item {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid #e0e0e0;
+}
+
+.object-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.object-item.selected {
+  background: #fff3cd;
+  border-color: #ffc107;
+  transform: scale(1.1);
+}
+
+.test-object {
+  font-size: 2rem;
+  position: absolute;
+  left: 50%;
+  top: -40px;
+  transform: translateX(-50%);
+  transition: all 1s ease-in-out;
+}
+
+.test-object.in-water.floating {
+  top: 20px;
+  animation: bob 2s infinite ease-in-out;
+}
+
+.test-object.in-water.sinking {
+  top: 60%;
+  animation: sink 2s ease-in-out forwards;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+@keyframes sink {
+  0% { transform: translateX(-50%) translateY(0); opacity: 1; }
+  100% { transform: translateX(-50%) translateY(100px); opacity: 0.7; }
+}
+
+.result-message {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 15px 25px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  animation: popup 0.5s ease-out;
+  z-index: 10;
+}
+
+@keyframes popup {
+  0% { transform: translateX(-50%) scale(0); opacity: 0; }
+  50% { transform: translateX(-50%) scale(1.1); }
+  100% { transform: translateX(-50%) scale(1); opacity: 1; }
+}
+
+.object-item span {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.object-item p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+
+.water-tank {
+  background: linear-gradient(to bottom, #e3f2fd 0%, #90caf9 100%);
+  border-radius: 15px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #1976d2;
+}
+
+.water {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80%;
+  background: linear-gradient(to bottom, rgba(33, 150, 243, 0.7), rgba(21, 101, 192, 0.9));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* 知识框样式 */
+.knowledge-box {
+  background: #fff3cd;
+  border: 2px solid #ffc107;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 30px 0;
+}
+
+.knowledge-box h3 {
+  color: #856404;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.knowledge-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.knowledge-box li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ffeaa7;
+  color: #856404;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 30px;
+}
+
+.knowledge-box li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #ffc107;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.knowledge-box li:last-child {
+  border-bottom: none;
+}
+
+/* 解释框样式 */
+.explanation {
+  margin: 30px 0;
+}
+
+.explanation h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.rule-box {
+  background: #d1ecf1;
+  border: 2px solid #17a2b8;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+}
+
+.rule-box p {
+  color: #0c5460;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.rule-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rule-box li {
+  padding: 12px;
+  margin: 10px 0;
+  background: white;
+  border-radius: 10px;
+  color: #0c5460;
+  font-size: 1.1rem;
+  border-left: 4px solid #17a2b8;
+}
+
+/* 趣味知识框 */
+.fun-fact {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+  border-radius: 15px;
+  padding: 25px;
+  margin: 30px 0;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.fun-fact h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.fun-fact p {
+  color: #34495e;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* 浴缸演示样式 */
+.bathtub-demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  min-height: 200px;
+  position: relative;
+}
+
+.bathtub {
+  font-size: 4rem;
+  position: relative;
+}
+
+.water-level {
+  background: rgba(33, 150, 243, 0.3);
+  height: 20px;
+  width: 200px;
+  border: 2px solid #2196F3;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #1976D2;
+  position: relative;
+}
+
+.person-in-water {
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-10px); }
+}
+
+.result-box {
+  background: #e8f5e8;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.result-box h4 {
+  color: #2E7D32;
+  margin-bottom: 10px;
+}
+
+.result-box p {
+  color: #1B5E20;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+/* 体重比较样式 */
+.weight-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  justify-items: center;
+}
+
+.on-land, .in-water {
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.on-land {
+  background: #fff3e0;
+  border: 2px solid #ff9800;
+}
+
+.on-land:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 152, 0, 0.3);
+}
+
+.in-water {
+  background: #e3f2fd;
+  border: 2px solid #2196F3;
+}
+
+.in-water:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+}
+
+.on-land span, .in-water span {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.on-land p, .in-water p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.on-land p {
+  color: #e65100;
+}
+
+.in-water p {
+  color: #0d47a1;
+}
+
+/* 游泳者动画 */
+.swimmer-animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  min-height: 120px;
+}
+
+.swimmer {
+  font-size: 3rem;
+  animation: swim 4s infinite ease-in-out;
+}
+
+@keyframes swim {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(30px); }
+}
+
+.water-particles {
+  display: flex;
+  gap: 10px;
+}
+
+.particle {
+  font-size: 1.5rem;
+  animation: splash 2s infinite ease-in-out;
+}
+
+.particle:nth-child(1) { animation-delay: 0s; }
+.particle:nth-child(2) { animation-delay: 0.3s; }
+.particle:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes splash {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 1; }
+  50% { transform: translateY(-10px) scale(1.2); opacity: 0.8; }
+}
+
+/* 阻力比较样式 */
+.resistance-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  justify-items: center;
+}
+
+.shape-box {
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shape-box:hover {
+  transform: scale(1.05);
+}
+
+.shape-circle {
+  background: #e8f5e8;
+  border: 2px solid #4CAF50;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 2rem;
+}
+
+.shape-square {
+  background: #ffebee;
+  border: 2px solid #f44336;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 2rem;
+}
+
+.shape-box p {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* 游泳姿势卡片 */
+.swimming-styles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.style-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-top: 4px solid #2196F3;
+}
+
+.style-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.style-card h4 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.style-card p {
+  color: #7f8c8d;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.style-card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.style-card li {
+  padding: 5px 0;
+  color: #555;
+  font-size: 0.9rem;
+  position: relative;
+  padding-left: 20px;
+}
+
+.style-card li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #2196F3;
+  font-weight: bold;
+}
+
+/* 杠杆演示样式 */
+.lever-demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  min-height: 150px;
+}
+
+.lever-board {
+  position: relative;
+  width: 300px;
+  height: 8px;
+  background: linear-gradient(to right, #8B4513, #A0522D);
+  border-radius: 4px;
+  transform-origin: center;
+  animation: lever-move 4s infinite ease-in-out;
+}
+
+@keyframes lever-move {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+
+.fulcrum {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff9800;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.effort {
+  position: absolute;
+  top: -40px;
+  left: 20%;
+  background: #4CAF50;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.load {
+  position: absolute;
+  top: -40px;
+  right: 20%;
+  background: #f44336;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* 身体杠杆样式 */
+.body-levers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.arm-lever, .leg-lever {
+  background: #f5f5f5;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #9e9e9e;
+}
+
+.arm-lever h4, .leg-lever h4 {
+  color: #424242;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.lever-diagram {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lever-diagram > div {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  border-left: 3px solid #2196F3;
+}
+
+.shoulder, .hip {
+  border-color: #ff9800;
+}
+
+.muscle, .thigh-muscle {
+  border-color: #4CAF50;
+}
+
+.hand, .foot {
+  border-color: #f44336;
+}
+
+/* 技巧展示样式 */
+.technique-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.technique {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-top: 4px solid #9C27B0;
+}
+
+.technique:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.technique h4 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.technique p {
+  color: #7f8c8d;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.technique-tip {
+  background: linear-gradient(135deg, #9C27B0, #673AB7);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .course-grid {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+  
+  .course-card {
+    padding: 20px;
+  }
+  
+  .objects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .chapter-main {
+    padding: 20px;
+  }
+  
+  .lesson-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 20px;
+  }
+  
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .course-card {
+    padding: 15px;
+  }
+  
+  .objects-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .demo-box {
+    padding: 20px;
+  }
+}
