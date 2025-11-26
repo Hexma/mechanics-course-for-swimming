@@ -933,10 +933,163 @@ body {
   display: inline-block;
 }
 
+/* 运动选择页面样式 */
+.sport-selection {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sport-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  padding: 20px;
+}
+
+.sport-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.sport-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.sport-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
+  transition: left 0.5s ease;
+}
+
+.sport-card:hover::before {
+  left: 100%;
+}
+
+.swimming-card {
+  border: 3px solid #4A90E2;
+}
+
+.swimming-card:hover {
+  border-color: #357ABD;
+}
+
+.running-card {
+  border: 3px solid #FF5722;
+}
+
+.running-card:hover {
+  border-color: #E64A19;
+}
+
+.sport-icon {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.sport-card h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.sport-card p {
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+.sport-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.feature-tag {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.feature-tag:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sport-courses-header {
+  padding: 40px 30px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.sport-courses-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.sport-courses-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* 运动课程页面样式 */
+.sport-courses-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #87CEEB 0%, #4A90E2 100%);
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
   .header h1 {
     font-size: 2rem;
+  }
+  
+  .sport-cards {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 15px;
+  }
+  
+  .sport-card {
+    padding: 30px;
+  }
+  
+  .sport-icon {
+    font-size: 4rem;
+    margin-bottom: 15px;
+  }
+  
+  .sport-card h2 {
+    font-size: 1.6rem;
   }
   
   .course-grid {
@@ -1009,6 +1162,36 @@ body {
   
   .course-header {
     padding: 45px 15px 15px 15px;
+  }
+  
+  @media (max-width: 480px) {
+    .sport-cards {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 10px;
+    }
+    
+    .sport-card {
+      padding: 20px;
+    }
+    
+    .sport-icon {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    
+    .sport-card h2 {
+      font-size: 1.4rem;
+    }
+    
+    .sport-features {
+      gap: 8px;
+    }
+    
+    .feature-tag {
+      font-size: 0.75rem;
+      padding: 4px 8px;
+    }
   }
   
   .course-header h1 {
